@@ -12,14 +12,7 @@ client.on('message', msg => {
   if (msg.content === 'PÖMPS!') {
     msg.reply('What do you mean?!');
   }
-  if (msg.content === 'Make me a scrub') {
-    try {
-      msg.member.addRole('380358333862772737');
-      msg.reply('Yes sir');
-    } catch (err) {
-      console.log(err);
-    }
-  }
+
 });
 
 client.on('guildMemberAdd', member => {
