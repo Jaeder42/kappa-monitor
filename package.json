@@ -1,0 +1,14 @@
+{
+  "name": "kappamonitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node bot.js"
+  },
+  "author": "Johan Jäderblom",
+  "license": "ISC",
+  "dependencies": {
+    "discord.io": "^2.5.3"
+  }
+}
