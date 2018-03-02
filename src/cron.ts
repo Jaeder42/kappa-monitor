@@ -3,7 +3,7 @@
 import * as cron from 'node-cron';
 export default (cb) => {
 
-  const cronJob = cron.schedule('* */10 * * * *', () => {
+  const cronJob = cron.schedule('0 */10 * * * *', () => {
     cb();
   }, null, true);
 }
