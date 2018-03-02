@@ -7,13 +7,13 @@ export default () => {
   client.on('ready', () => {
     log.info(`Logged in as ${client.user.tag}!`);
   });
-  client.on('message', msg => {
+  client.on('message', async msg => {
     try {
       if (msg.content === 'ping') {
-        msg.reply('pong');
+        await msg.reply('pong');
       }
       if (msg.content === 'PÖMPS!') {
-        msg.reply('What do you mean?!');
+        await msg.reply('What do you mean?!');
       }
     } catch (err) {
       log.error(err);
