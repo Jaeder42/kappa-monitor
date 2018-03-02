@@ -1,11 +1,15 @@
 import * as Discord from 'discord.js';
 import log from './utils/log';
+import cron from './cron';
 const { BOT_TOKEN } = process.env;
 export default () => {
   const client = new Discord.Client();
 
   client.on('ready', () => {
     log.info(`Logged in as ${client.user.tag}!`);
+    cron(() => {
+      log.info('Testing');
+    })
   });
   client.on('message', async msg => {
     try {

@@ -13,6 +13,7 @@
     "@types/node": "^9.4.6",
     "@types/restify": "^5.0.7",
     "discord.js": "^11.3.0",
+    "node-cron": "^1.2.1",
     "pino": "^4.13.0",
     "restify": "^6.3.4",
     "ts-node": "^5.0.1",
