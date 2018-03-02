@@ -1,6 +1,7 @@
 import * as Discord from 'discord.js';
 import log from './utils/log';
 import cron from './cron';
+import * as handlers from './handlers';
 const { BOT_TOKEN } = process.env;
 export default () => {
   const client = new Discord.Client();
@@ -10,16 +11,7 @@ export default () => {
     cron();
   });
   client.on('message', async msg => {
-    try {
-      if (msg.content === 'ping') {
-        await msg.reply('pong');
-      }
-      if (msg.content === 'PÖMPS!') {
-        await msg.reply('What do you mean?!');
-      }
-    } catch (err) {
-      log.error(err);
-    }
+    handlers.message(msg);
   });
 
   client.on('guildMemberAdd', member => {
