@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --exec 'ts-node -r dotenv/config' src/index"
   },
   "author": "Johan Jäderblom",
   "license": "ISC",
@@ -16,5 +17,9 @@
     "restify": "^6.3.4",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.1"
   }
 }
