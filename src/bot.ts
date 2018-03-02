@@ -7,9 +7,7 @@ export default () => {
 
   client.on('ready', () => {
     log.info(`Logged in as ${client.user.tag}!`);
-    cron(() => {
-      log.info('Testing');
-    })
+    cron();
   });
   client.on('message', async msg => {
     try {
